@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "bun run --hot index.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "hono": "^3.9.2"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.7"
+  }
+}

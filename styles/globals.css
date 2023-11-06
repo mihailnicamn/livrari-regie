@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#market-props-chips::-webkit-scrollbar {
+  display: none;
+}
+
+
+#market-props-chips {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
