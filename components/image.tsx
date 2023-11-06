@@ -14,19 +14,28 @@ export default function Image({ src, alt, width = '100%', height = '100%', class
         if (typeof onPress === 'function') onPress();
     }
     return (
-        <NextUIImage
-            onClick={handleClick}
-            loading='eager'
-            isBlurred
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            style={{
-                ...(width && { width }),
-                ...(height && { height }),
-            }}
-            className={className}
-        />
+
+        <div style={{
+            borderRadius: '9px',
+            overflow: 'hidden',
+            zIndex: 10,
+        }}>
+            <NextUIImage
+                isZoomed
+                onClick={handleClick}
+                loading='eager'
+                isBlurred
+                src={src}
+                alt={alt}
+                width={width}
+                height={height}
+                style={{
+                    borderRadius: '0.5rem',
+                    ...(width && { width }),
+                    ...(height && { height }),
+                }}
+                className={className}
+            />
+        </div>
     )
 }

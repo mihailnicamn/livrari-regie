@@ -49,7 +49,12 @@ const MarketDescription = ({ market }: { market: Market }) => {
 }
 const Market = ({ market }: { market: Market }) => {
   return (<>
-    <Card isFooterBlurred className="w-full h-32 col-span-12 sm:col-span-5 ml-2 mr-2 mb-2">
+
+    <Card isFooterBlurred className="w-full h-32 col-span-12 sm:col-span-5 ml-2 mr-2 mb-2 overflow-hidden" style={{
+      borderRadius: '15px',
+      overflow: 'hidden',
+      zIndex: 11,
+    }}>
       <MarketTitle market={market} />
       <Image
         alt="Card example background"

@@ -129,7 +129,11 @@ const ProductStock = ({ stock }: { stock: number }) => {
 const Product = ({ product }: { product: Product }) => {
     const { isOpen, onOpenChange, onOpen, onClose } = useDisclosure();
     return (<>
-        <Card className="w-full h-32 mt-2 col-span-12 ml-2 mr-2 mb-2" isFooterBlurred>
+        <Card className="w-full h-32 mt-2 col-span-12 ml-2 mr-2 mb-2" isFooterBlurred style={{
+            borderRadius: '15px',
+            overflow: 'hidden',
+            zIndex: 11,
+        }}>
             <div className='h-32'>
                 <CardHeader className="absolute top-0 left-0 w-full z-20" onClick={onOpen}>
                     <h4 className="text-white text-2xl font-bold [text-shadow:_1px_1px_5px_rgb(0_0_0_/_100%)]">{product.name}</h4>
@@ -224,7 +228,11 @@ const MarketHeader = ({ name, description, image, props, hours }: { name: string
     const _type = props.find(prop => prop.scope === 'type')
     const _today = getHoursContext(hours.find(hour => hour.day.toLowerCase() === new Date().toLocaleDateString('ro-RO', { weekday: 'long' })))
     return (<>
-        <Card className="w-full fixed top-0 h-32 rounded-none rounded-b-lg z-50">
+        <Card className="w-full fixed top-0 h-32 rounded-none rounded-b-lg z-50" style={{
+            borderRadius: '15px',
+            overflow: 'hidden',
+            zIndex: 11,
+        }}>
             <Image
                 alt="Card example background"
                 className="z-0 w-full h-32 scale-125 -translate-y-6 object-cover"

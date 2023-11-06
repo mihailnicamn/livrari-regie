@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react'
-
+declare global {
+    interface Window {
+        navigator: any;
+        matchMedia: any;
+    }
+}
 export default function useUserAgent() {
     /**
      * we set our initial state as null because we don't know what the user agent is yet

@@ -11,7 +11,7 @@ const AddToMobileChromeIos = dynamic(() => import('./messages/chrome-android'), 
 const AddToSamsung = dynamic(() => import('./messages/samsung'), { loading: () => <ModuleLoading /> });
 const AddToOtherBrowser = dynamic(() => import('./messages/any'), { loading: () => <ModuleLoading /> });
 
-import useUserAgent from '@/components/pwa/user-agent';
+import useUserAgent from '@/components/user-agent';
 
 type AddToHomeScreenPromptType = 'safari' | 'chrome' | 'firefox' | 'other' | 'firefoxIos' | 'chromeIos' | 'samsung' | '';
 const COOKIE_NAME = 'addToHomeScreenPrompt';

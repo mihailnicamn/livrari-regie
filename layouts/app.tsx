@@ -4,6 +4,7 @@ import AddToHomeScreen from '@/components/pwa/prompt';
 import { MobileNav } from "@/components/nav"
 import { screenClassNames } from "@/constants"
 import axios from 'axios'
+import useUserAgent from "@/components/user-agent";
 const Mobile = ({ me }) => {
     return (<>
         <MobileNav menu={[
@@ -26,6 +27,12 @@ export interface AppProps {
 }
 
 export default function App({ children, me }: AppProps) {
+    const { isMobile } = useUserAgent();
+    if (!isMobile) return (
+        <div>
+            Doar pe mobil momentan! 😉
+        </div>
+    )
     return (
         <main>
             {children}
